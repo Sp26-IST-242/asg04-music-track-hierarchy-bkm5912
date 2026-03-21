@@ -19,3 +19,8 @@ responsibility is to:
             (Kendrick Lamar, Hip-Hop) DAMN. active = True,  debut year: 2017,
             duration: 03:40
 """
+from music_track import MusicTrack
+
+class Song(MusicTrack):
+    def __init__(self, artist, album, duration_seconds: int):
+        super().__init__(artist, album, duration_seconds)
