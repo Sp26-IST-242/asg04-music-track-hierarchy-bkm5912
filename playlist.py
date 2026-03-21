@@ -23,3 +23,10 @@ class Playlist:
 
     def sort_by_release_year(self) -> None:
         self._tracks.sort()
+
+    @property
+    def tracks(self):
+        return list(self._tracks)
+    
+    def __str__(self) -> str:
+        return "\n".join(str(track) for track in self._tracks)
