@@ -17,3 +17,21 @@ class Album:
         self._active = active
         # make a copy so it doesn't get affected
         self._years = list(years)
+
+
+    # getters
+    @property
+    def title(self) -> str:
+        return self._title
+    
+    @property
+    def active(self) -> bool:
+        return self._active
+    
+    @property
+    def years(self) -> list:
+        return list(self._years)
+    
+    @property
+    def debut_year(self) -> int:
+        return self._years[0]
