@@ -45,10 +45,12 @@ class MusicTrack(ABC):
     @abstractmethod
     def play_time_formatted(self) -> str:
         pass
-    
+
+    # get the total play time
     def total_play_time(self, num_plays: int) -> float:
         return self._duration_seconds * num_plays
     
+    # sorting
     def __eq__(self, other) -> bool:
         if not isinstance(other, MusicTrack):
             return NotImplemented
