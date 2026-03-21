@@ -8,3 +8,12 @@ Key concepts to implement:
   • A *derived* property (debut_year) that computes its value from stored data
     rather than keeping a second field in sync.
 """
+
+class Album:
+    def __init__(self, title: str, active: bool, years: list):
+        if len(years) == 0:
+            raise ValueError("Years list can not be empty")
+        self._title = title
+        self._active = active
+        # make a copy so it doesn't get affected
+        self._years = list(years)
