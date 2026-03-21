@@ -41,4 +41,11 @@ class MusicTrack(ABC):
     @property
     def release_year(self) -> int:
         return self._album.debut_year # not stored
+    
+    @abstractmethod
+    def play_time_formatted(self) -> str:
+        pass
+    
+    def total_play_time(self, num_plays: int) -> float:
+        return self._duration_seconds * num_plays
       
