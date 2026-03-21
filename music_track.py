@@ -38,7 +38,7 @@ class MusicTrack(ABC):
     
     @property
     def duration_seconds(self) -> int:
-        return self.duration_seconds
+        return self._duration_seconds
     
     @property
     def release_year(self) -> int:
