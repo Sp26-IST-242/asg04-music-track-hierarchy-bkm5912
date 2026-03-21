@@ -48,4 +48,13 @@ class MusicTrack(ABC):
     
     def total_play_time(self, num_plays: int) -> float:
         return self._duration_seconds * num_plays
-      
+    
+    def __eq__(self, other) -> bool:
+        if not isinstance(other, MusicTrack):
+            return NotImplemented
+        return self.release_year == other.release_year
+    
+    def __lt__(self, other) -> bool:
+        if not isinstance(other, MusicTrack):
+            return NotImplemented
+        return self.release_year < other.release_year
