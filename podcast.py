@@ -42,4 +42,4 @@ class Podcast(MusicTrack):
         return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
     
     def __str__(self) -> str:
-        return f"{self.artist} {self.album}, duration: {self.play_time_formatted()} is explicit: {self.is_explicit}"
+        return f"({self.artist}) {self.album}, duration: {self.play_time_formatted()} is explicit: {self.is_explicit}"
