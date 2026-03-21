@@ -35,3 +35,6 @@ class Album:
     @property
     def debut_year(self) -> int:
         return self._years[0]
+    
+    def __str__(self):
+        return f"{self._title} active = {self._active}, debut year: {self.debut_year}"
