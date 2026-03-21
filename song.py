@@ -24,3 +24,11 @@ from music_track import MusicTrack
 class Song(MusicTrack):
     def __init__(self, artist, album, duration_seconds: int):
         super().__init__(artist, album, duration_seconds)
+
+    def play_time_formatted(self) -> str:
+        minutes = self.duration_seconds // 60
+        seconds = self.duration_seconds % 60
+        return f"{minutes:02d}:{seconds:02d}"
+    
+    def __str__(self) -> str:
+        return f"({self.artist}) {self.album}, duration: {self.play_time_formatted()}"
