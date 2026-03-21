@@ -22,3 +22,6 @@ class Artist:
     def genre(self)  -> str:
         return self._genre
     
+    # return the name and genre
+    def __str__(self) -> str:
+        return f"{self._name}, {self._genre}"
