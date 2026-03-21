@@ -18,7 +18,9 @@ Design decisions to implement:
     None when you define __eq__, making objects unhashable unless you fix it).
 """
 from abc import ABC, abstractmethod
+from functools import total_ordering
 
+@total_ordering
 class MusicTrack(ABC):
     def __init__(self, artist, album, duration_seconds: int):
         self._artist = artist
