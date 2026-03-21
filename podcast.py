@@ -35,9 +35,10 @@ class Podcast(MusicTrack):
         return self._is_explicit
     
     def play_time_formatted(self) -> str:
-        hours = self.duration_seconds // 3600
-        minutes = (self.duration_seconds % 3600) // 60
-        seconds = self.duration_seconds % 60
+        time = int(self.duration_seconds)
+        hours = time // 3600
+        minutes = (time % 3600) // 60
+        seconds = time % 60
         return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
     
     def __str__(self) -> str:

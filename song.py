@@ -26,8 +26,9 @@ class Song(MusicTrack):
         super().__init__(artist, album, duration_seconds)
 
     def play_time_formatted(self) -> str:
-        minutes = self.duration_seconds // 60
-        seconds = self.duration_seconds % 60
+        time = int(self.duration_seconds)
+        minutes = time // 60
+        seconds = time % 60
         return f"{minutes:02d}:{seconds:02d}"
     
     def __str__(self) -> str:
