@@ -37,8 +37,24 @@ if __name__ == "__main__":
     # make the podcasts
     artist3 = Artist("Joe Rogan", "Comedy")
     album3 = Album("The Joe Rogan Experience", True, [2009, 2010])
-    poadcast1 = Podcast(artist3, album3, 9000, True)
+    podcast1 = Podcast(artist3, album3, 9000, True)
 
     artist4 = Artist("Sarah Koenig", "Journalism")
     album4 = Album("Serial", False, [2014, 2015])
-    poadcast2 = Podcast(artist4, album4, 5400)
+    podcast2 = Podcast(artist4, album4, 5400)
+
+    # make the playlist to store tracks
+    p = Playlist()
+    p.add_track(song1)
+    p.add_track(song2)
+    p.add_track(podcast1)
+    p.add_track(podcast2)
+
+    # Printing and sorting
+    print("Before sorting:")
+    print(p)
+
+    p.sort_by_release_year
+
+    print("\nAfter sorting:")
+    print(p)
