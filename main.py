@@ -33,3 +33,12 @@ if __name__ == "__main__":
     artist2 = Artist("Alanis Morissette", "Alternative")
     album2 = Album("Jagged Little Pill", False, [1995, 1996])
     song2 = Song(artist2, album2, 245)
+
+    # make the podcasts
+    artist3 = Artist("Joe Rogan", "Comedy")
+    album3 = Album("The Joe Rogan Experience", True, [2009, 2010])
+    poadcast1 = Podcast(artist3, album3, 9000, True)
+
+    artist4 = Artist("Sarah Koenig", "Journalism")
+    album4 = Album("Serial", False, [2014, 2015])
+    poadcast2 = Podcast(artist4, album4, 5400)
